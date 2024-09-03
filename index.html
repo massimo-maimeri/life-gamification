@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Life Gamification</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🎮 Life Gamification</h1>
+        </header>
+        <main>
+            <div class="score-container">
+                <h2>🏆 Punteggio Totale</h2>
+                <div id="total-score">0</div>
+            </div>
+            <form id="new-action-form" class="card">
+                <h2>✨ Aggiungi Nuova Azione</h2>
+                <input type="text" id="action-title" placeholder="Titolo azione" required>
+                <input type="number" id="action-score" placeholder="Punteggio" required>
+                <button type="submit">Aggiungi Azione</button>
+            </form>
+            <div class="actions-container card">
+                <h2>📋 Ultime Azioni</h2>
+                <ul id="actions-list"></ul>
+            </div>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
