@@ -5,12 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Life Gamification</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="manifest" href="manifest.json">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="container">
         <header>
             <h1>🎮 Life Gamification</h1>
+            <div class="data-actions">
+                <button id="export-btn" class="data-btn">📤 Esporta</button>
+                <button id="import-btn" class="data-btn">📥 Importa</button>
+                <input type="file" id="import-input" style="display: none;">
+            </div>            
         </header>
         <main>
             <div class="score-container">

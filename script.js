@@ -129,3 +129,44 @@ document.getElementById('new-action-form').addEventListener('submit', function(e
 // Inizializzazione
 updateTotalScore();
 updateActionsList();
+
+// Funzione per esportare i dati
+function exportData() {
+    const actions = storage.getActions();
+    const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(actions));
+    const downloadAnchorNode = document.createElement('a');
+    downloadAnchorNode.setAttribute("href", dataStr);
+    downloadAnchorNode.setAttribute("download", "life_gamification_data.json");
+    document.body.appendChild(downloadAnchorNode);
+    downloadAnchorNode.click();
+    downloadAnchorNode.remove();
+}
+
+// Funzione per importare i dati
+function importData(file) {
+    const reader = new FileReader();
+    reader.onload = function(e) {
+        const actions = JSON.parse(e.target.result);
+        storage.saveActions(actions);
+        updateTotalScore();
+        updateActionsList();
+    };
+    reader.readAsText(file);
+}
+
+// Event listeners per i pulsanti esporta ed importa
+document.getElementById('export-btn').addEventListener('click', exportData);
+document.getElementById('import-btn').addEventListener('click', () => document.getElementById('import-input').click());
+document.getElementById('import-input').addEventListener('change', (e) => importData(e.target.files[0]));
+
+// Aggiunta Service Worker
+if ('serviceWorker' in navigator) {
+    window.addEventListener('load', function() {
+      navigator.serviceWorker.register('/service-worker.js').then(function(registration) {
+        console.log('ServiceWorker registration successful with scope: ', registration.scope);
+      }, function(err) {
+        console.log('ServiceWorker registration failed: ', err);
+      });
+    });
+  }
+  
