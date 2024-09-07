@@ -10,12 +10,34 @@
         "src": "assets/images/icon.svg",
         "sizes": "any",
         "type": "image/svg+xml",
-        "purpose": "any maskable"
+        "purpose": "any"
       },
       {
-        "src": "assets/images/icon-256.png",
-        "sizes": "192x192",
+        "src": "assets/images/icon.svg",
+        "sizes": "any",
+        "type": "image/svg+xml",
+        "purpose": "maskable"
+      },
+      {
+        "src": "assets/images/icon-512.png",
+        "sizes": "512x512",
         "type": "image/png"
+      }
+    ],
+    "screenshots": [
+      {
+        "src": "assets/screenshots/screenshoot1.png",
+        "sizes": "1280x720",
+        "type": "image/png",
+        "form_factor": "wide",
+        "label": "Desktop view of Life Gamification App"
+      },
+      {
+        "src": "assets/screenshots/screenshoot2.png",
+        "sizes": "540x720",
+        "type": "image/png",
+        "form_factor": "narrow",
+        "label": "Mobile view of Life Gamification App"
       }
     ]
   }
