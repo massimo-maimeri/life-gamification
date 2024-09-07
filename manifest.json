@@ -1,6 +1,7 @@
 {
     "name": "Life Gamification",
     "short_name": "LifeGame",
+    "description": "An easy way to gamify your life with points.",
     "start_url": "index.html",
     "display": "standalone",
     "background_color": "#020045",
