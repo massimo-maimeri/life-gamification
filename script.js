@@ -52,7 +52,20 @@ function deleteAction(id) {
 function updateTotalScore() {
     const actions = storage.getActions();
     const totalScore = actions.reduce((sum, action) => sum + action.score, 0);
-    document.getElementById('total-score').textContent = totalScore;
+    const totalScoreElement = document.getElementById('total-score');
+    const scoreContainer = document.querySelector('.score-container');
+    
+    totalScoreElement.textContent = totalScore;
+    
+    // Rimuovi le classi esistenti
+    scoreContainer.classList.remove('positive', 'negative');
+    
+    // Aggiungi la classe appropriata in base al punteggio
+    if (totalScore >= 0) {
+        scoreContainer.classList.add('positive');
+    } else {
+        scoreContainer.classList.add('negative');
+    }
 }
 
 // Funzione per formattare la data

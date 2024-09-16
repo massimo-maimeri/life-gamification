@@ -49,8 +49,18 @@ h2 {
     margin-bottom: 20px;
 }
 
-.score-container {
+.score-container.positive {
     background: linear-gradient(45deg, #00b09b, #96c93d);
+    color: white;
+    text-align: center;
+    padding: 30px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
+}
+
+.score-container.negative {
+    background: linear-gradient(45deg, #ff416c, #ff4b2b);
     color: white;
     text-align: center;
     padding: 30px;
