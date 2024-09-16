@@ -84,6 +84,7 @@ h2 {
     border-radius: 8px;
     font-size: 1em;
     transition: all 0.3s ease;
+    text-align: center;
 }
 
 #new-action-form input:focus {
