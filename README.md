@@ -1,6 +1,8 @@
 ## 🎮 Life Gamification
 A simple web app to let you gamify your real life actions with points. 
+
 ![demo-life-gamification](demo.gif)
+
 Also available offline after first usage.
 
 ### Functions
@@ -21,7 +23,7 @@ Basic Vanilla Html, CSS, JS.
 Items are stored locally on your browser in a simple JSON format.
 
 ### Deployment
-Use docker and docker compose installed.
+Use docker and docker compose.
 
 RUN docker compose up -d to run on port 8080 the webapp.
 
