@@ -13,7 +13,7 @@ Also available offline after first usage.
 🏆 See your total score change over time. 
 Decrease good habits points to challenge yourself to keep doing great stuff out there. 🏆
 
-### Upcomming Updates:
+### Upcoming Updates:
 No updates planned. I just wanted to made a simple web app using docker to deploy it. 
 
 
